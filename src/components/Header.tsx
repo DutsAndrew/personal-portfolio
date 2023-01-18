@@ -1,4 +1,8 @@
 import React from "react";
+import topSVG from '../assets/arrow-up.svg';
+import projectsSVG from '../assets/code-braces.svg';
+import contactSVG from '../assets/account.svg';
+import resumeSVG from '../assets/file-document.svg';
 
 const Header = () => {
 
@@ -36,7 +40,9 @@ const Header = () => {
           onClick={(e) => handleScrollToTop(e)} >
           <img 
             className="nav-header-top-svg"
-            alt="arrow pointing up" >
+            alt="arrow pointing up"
+            src={topSVG}
+            data-testid="top-svg-test" >
           </img>
           Top
         </button>
@@ -45,7 +51,9 @@ const Header = () => {
           onClick={(e) => handleScrollToProjects(e)} >
           <img 
             className="nav-header-projects-svg"
-            alt="html opening and closing tags" >
+            alt="html opening and closing tags"
+            src={projectsSVG}
+            data-testid="project-svg-test" >
           </img>
           Projects
         </button>
@@ -54,7 +62,9 @@ const Header = () => {
           onClick={(e) => handleScrollToContact(e)} >
           <img 
             className="nav-header-contact-svg"
-            alt="outline of a person">
+            alt="outline of a person"
+            src={contactSVG}
+            data-testid="contact-svg-test" >
           </img>
           Contact
         </button>
@@ -63,7 +73,9 @@ const Header = () => {
           onClick={(e) => handleScrollToResume(e)} >
           <img 
             className="nav-header-resume-svg"
-            alt="resume" >
+            alt="resume"
+            src={resumeSVG}
+            data-testid="resume-svg-test" >
           </img>
           Resume
         </button>

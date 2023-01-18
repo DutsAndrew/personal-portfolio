@@ -9,6 +9,8 @@ const Roles = () => {
     "Backend Developer"
   ];
 
+  // GO BACK AND WRITE TESTS FOR ALL COMPONENTS
+
   return (
     <section 
       className="roles-container">
