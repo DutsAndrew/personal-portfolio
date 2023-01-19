@@ -1,5 +1,4 @@
 import React from "react";
-import reactSVG from '../assets/react.svg';
 
 const Tools = () => {
 
