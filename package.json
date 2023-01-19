@@ -41,6 +41,6 @@
     ]
   },
   "devDependencies": {
-    "@types/sinonjs__fake-timers": "^8.1.2"
+    
   }
 }
