@@ -1,8 +1,20 @@
 import React from "react";
+const resume = require('../assets/AndrewDutsonResume.pdf');
 
 const Resume = () => {
+
+  const resumeText = "Resume, (download - 100kb)";
+
   return (
-    <p>Here's my Resume</p>
+    <section 
+      className="resume-container">
+      <a 
+        className="resume"
+        href={resume}
+        download="Andrew Dutson's Resume" >
+        {resumeText}
+      </a>
+    </section>
   );
 };
 

@@ -12,6 +12,7 @@ const Projects = () => {
       tools: 'ReactJS, Typescript, Firebase, CSS, Git, Bad Words Filter, uniqid, and svgs',
       built: 'December 2022',
       testid: 'espressit-test',
+      orientation: 'left',
     },
     {
       name: 'Where\'s Waldo - Photo Tagging App',
@@ -21,6 +22,7 @@ const Projects = () => {
       tools: 'ReactJS, Typescript, Firebase, CSS, Git, uniqid, svgs',
       built: 'November 2022',
       testid: 'photo-tagging-test',
+      orientation: 'right',
     },
     {
       name: 'Library App',
@@ -30,6 +32,7 @@ const Projects = () => {
       tools: 'ReactJS, TypeScript, Firebase, CSS, Git, uniqid, svgs',
       built: 'November 2022',
       testid: 'library-test',
+      orientation: 'left',
     },
     {
       name: 'Steam Store - Shopping App',
@@ -39,6 +42,7 @@ const Projects = () => {
       tools: 'ReactJS, JavaScript, STEAM API, CSS, Git, uniqid',
       built: 'October 2022',
       testid: 'shopping-test',
+      orientation: 'right',
     },
     {
       name: 'Weather App',
@@ -48,6 +52,7 @@ const Projects = () => {
       tools: 'JavaScript, openweather API, CSS, Git',
       built: 'July 2022',
       testid: 'weather-test',
+      orientation: 'left',
     },
     {
       name: 'To Do List',
@@ -57,6 +62,7 @@ const Projects = () => {
       tools: 'JavaScript, Local Storage, CSS, Git',
       built: 'June 2022',
       testid: 'todo-test',
+      orientation: 'right',
     },
   ];
 
@@ -67,7 +73,8 @@ const Projects = () => {
         className="projects">
         {Array.isArray(projects) && projects.map((project) => {
           return <li 
-            className="project"
+            id="project"
+            className={project.orientation}
             key={project.name}
             data-testid={project.testid} >
 

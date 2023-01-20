@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import "@testing-library/jest-dom";
-import userEvent from "@testing-library/user-event";
 import Bio from '../components/Bio';
 
 describe('unit test for Bio', () => {
