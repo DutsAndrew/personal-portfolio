@@ -7,7 +7,6 @@ const Socials = () => {
 
   const linkedinLink = 'https://www.linkedin.com/in/dutson/';
   const githubLink = 'https://github.com/DutsAndrew';
-  const emailRef = 'dutsandrew@gmail.com';
 
   return (
     <nav 
@@ -33,15 +32,16 @@ const Socials = () => {
         </img>
       </a>
 
-      <button 
+      <a 
         className="email-button" 
-        data-testid="email-test" >
+        data-testid="email-test"
+        href="mailto:dutsandrew@gmail.com" >
         <img 
           className="email-svg" 
           alt="email icon"
           src={emailSVG} >
         </img>
-      </button>
+      </a>
 
     </nav>
   );
