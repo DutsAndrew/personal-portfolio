@@ -74,14 +74,14 @@
 
 @media (max-width: 600px) {
   .introduction-text-part-1, .introduction-text-part-2 {
-    font-size: 1.5em;
+    font-size: 2em;
     min-width: 15vw;
   }
 }
 
 @media (min-width: 601px) {
   .introduction-text-part-1, .introduction-text-part-2 {
-    font-size: 2.5em;
+    font-size: 3em;
   }
 }
 
@@ -94,9 +94,11 @@
 }
 
 .introduction-text-part-2 {
-  margin-top: 10%;
+  margin-top: 15%;
   max-width: 50vw;
   animation: slowly-fade-in 5s 1 ease-in-out;
+  padding-left: 2%;
+  border-left: 1px solid #ffa500;
 }
 
 .profile-img {
@@ -341,8 +343,16 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  padding: 2%;
   margin: 2%;
+  gap: 0.25vw;
   border: 1px solid rgb(0,0,0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .project-src-code-container, .project-src-live-container {
+    min-width: 25vw;
+  }
 }
 
 .project-src-code-container:hover, .project-src-live-container:hover {
@@ -352,14 +362,15 @@
 }
 
 .project-src-live-link, .project-src-code-link {
-  font-size: 1.5em;
+  font-size: 1.75em;
   text-decoration: none;
   color: black;
 }
 
 .project-src-live-svg, .project-src-code-svg {
-  max-width: 8vw;
-  min-width: 4vw;
+  max-width: 5vw;
+  min-width: 2.5vw;
+  margin: 0;
 }
 
 .connect-container {
