@@ -43,14 +43,29 @@
   margin-right: 1%;
 }
 
+@media (max-width: 600px) {
+  .nav-header-top, .nav-header-projects, .nav-header-contact, .nav-header-resume {
+    min-width: 10vw;
+    min-height: 3.5vh;
+    font-size: 0.6em;
+    padding: 1vh;
+    color: black;
+  }
+}
+
+@media (min-width: 600px) {
+  .nav-header-top, .nav-header-projects, .nav-header-contact, .nav-header-resume {
+    min-width: 15vw;
+    min-height: 3.5vh;
+    font-size: 0.75em;
+  }
+}
+
 .nav-header-top, .nav-header-projects, .nav-header-contact, .nav-header-resume {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  min-width: 15vw;
-  min-height: 3.5vh;
-  font-size: 0.75em;
   border: none;
 }
 
