@@ -15,11 +15,11 @@ const Connect = () => {
         className="connect-text">
         Let's Connect!
       </h2>
-      <button 
-        className="connect-button"
-        onClick={() => handleEmailOption()}>
+      <a 
+        className="send-email-link"
+        href="mailto:dutsandrew@gmail.com" >
         Contact
-      </button>
+      </a>
     </section>
   );
 };
