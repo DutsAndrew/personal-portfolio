@@ -92,6 +92,10 @@ const Projects = () => {
   return (
     <section 
       className="projects-container">
+      <h2
+        className="projects-header-text">
+        Projects
+      </h2>
       <ul 
         className="projects">
         {Array.isArray(projects) && projects.map((project) => {

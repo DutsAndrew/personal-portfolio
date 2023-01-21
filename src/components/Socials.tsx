@@ -41,10 +41,6 @@ const Socials = () => {
           alt="email icon"
           src={emailSVG} >
         </img>
-        <p 
-          className="email-text">
-          {emailRef}
-        </p>
       </button>
 
     </nav>

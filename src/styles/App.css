@@ -128,18 +128,22 @@
   gap: 2vw;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 .tools-text {
   font-size: 1.5em;
   margin: 0;
   margin-left: 2%;
+  margin-bottom: 1vh;
+  border-bottom: 1px black solid;
 }
 
 .tool-container {
+  display: flex;
+  flex-flow: column wrap;
   list-style: none;
   perspective: 100px;
-  margin: 0;
 }
 
 @media (max-width: 601px) {
@@ -212,6 +216,18 @@
 
 .tool-img:hover {
   transform: rotateX(30deg) translateZ(10px) scale(1.1);
+}
+
+.projects-container {
+  margin-top: 5vh;
+  overflow: hidden;
+}
+
+.projects-header-text {
+  font-size: 1.5em;
+  margin: 0;
+  margin-left: 2%;
+  border-bottom: 1px black solid;
 }
 
 .projects {
@@ -317,6 +333,91 @@
 .project-src-live-svg, .project-src-code-svg {
   max-width: 8vw;
   min-width: 4vw;
+}
+
+.connect-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  max-height: 30vh;
+  min-height: 20vh;
+  margin: 2%;
+}
+
+.connect-text {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.connect-button {
+  max-width: 40vw;
+  min-width: 20vw;
+  font-size: 1.5em;
+}
+
+.connect-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.socials-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  gap: 2vw;
+  max-height: 50vh;
+  min-height: 30vh;
+}
+
+.linkedin-link, .github-link, .email-button {
+  min-width: 15vw;
+  max-width: 35vw;
+}
+
+.email-button {
+  border: none;
+  background-color: white;
+}
+
+.linkedin-svg, .github-svg, .email-svg {
+  max-width: 35vw;
+  min-width: 15vw;
+}
+
+.linkedin-svg:hover, .github-svg:hover, .email-svg:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.linkedin-svg {
+  filter: invert(20%) sepia(43%) saturate(3849%) hue-rotate(195deg) brightness(97%) contrast(104%);
+}
+
+.github-svg {
+  filter: invert(3%) sepia(12%) saturate(661%) hue-rotate(314deg) brightness(94%) contrast(88%);
+}
+
+.email-svg {
+  filter: invert(85%) sepia(45%) saturate(3043%) hue-rotate(357deg) brightness(103%) contrast(102%);
+}
+
+.resume-container  {
+  max-height: 20vh;
+  min-height: 10vh;
+  margin: 5%;
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume {
+  font-size: 2em;
+  color: rgb(0,0,0);
 }
 
 @keyframes blink {
