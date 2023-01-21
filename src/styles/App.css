@@ -7,6 +7,10 @@
   align-items: center;
   min-height: 5vh;
   max-height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: black;
 }
 
 .signature-container {
@@ -45,7 +49,8 @@
   justify-content: center;
   align-items: center;
   min-width: 15vw;
-  min-height: 4vh;
+  min-height: 3.5vh;
+  font-size: 0.75em;
   border: none;
 }
 

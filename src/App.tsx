@@ -11,7 +11,8 @@ import Resume from './components/Resume';
 
 function App() {
   return (
-    <main>
+    <main 
+      className='main'>
       <Header />
       <Bio />
       <Roles />

@@ -6,20 +6,24 @@ import resumeSVG from '../assets/file-document.svg';
 
 const Header = () => {
 
-  const handleScrollToTop = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-    console.log(e);
+  const handleScrollToTop = (): void => {
+    window.scrollTo(0, document.body.scrollHeight - document.body.scrollHeight);
   };
 
-  const handleScrollToProjects = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-    console.log(e);
+  const handleScrollToProjects = (): void => {
+    // header blocks view, so it scrolls to bottom of tools container instead
+    const toolItem = document.querySelector('.tool-container');
+    if (toolItem) {
+      toolItem.scrollIntoView({block: 'start', inline: 'nearest'});
+    };
   };
 
-  const handleScrollToContact = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-    console.log(e);
+  const handleScrollToContact = (): void => {
+    window.scrollTo(0, document.body.scrollHeight);
   };
 
-  const handleScrollToResume = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-    console.log(e);
+  const handleScrollToResume = (): void => {
+    window.scrollTo(0, document.body.scrollHeight);
   };
 
   return (
@@ -37,7 +41,7 @@ const Header = () => {
       <nav className="header-nav-container">
         <button 
           className="nav-header-top"
-          onClick={(e) => handleScrollToTop(e)} >
+          onClick={() => handleScrollToTop()} >
           <img 
             className="nav-header-top-svg"
             alt="arrow pointing up"
@@ -48,7 +52,7 @@ const Header = () => {
         </button>
         <button 
           className="nav-header-projects"
-          onClick={(e) => handleScrollToProjects(e)} >
+          onClick={() => handleScrollToProjects()} >
           <img 
             className="nav-header-projects-svg"
             alt="html opening and closing tags"
@@ -59,7 +63,7 @@ const Header = () => {
         </button>
         <button 
           className="nav-header-contact"
-          onClick={(e) => handleScrollToContact(e)} >
+          onClick={() => handleScrollToContact()} >
           <img 
             className="nav-header-contact-svg"
             alt="outline of a person"
@@ -70,7 +74,7 @@ const Header = () => {
         </button>
         <button 
           className="nav-header-resume"
-          onClick={(e) => handleScrollToResume(e)} >
+          onClick={() => handleScrollToResume()} >
           <img 
             className="nav-header-resume-svg"
             alt="resume"

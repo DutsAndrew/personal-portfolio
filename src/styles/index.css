@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@media (min-width: 1800px) {
+  .biography-container, .roles-container, .tools-container, .projects-container, .connect-container, .socials-container, .resume-container {
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+}
