@@ -45,7 +45,7 @@
 
 @media (max-width: 600px) {
   .nav-header-top, .nav-header-projects, .nav-header-contact, .nav-header-resume {
-    min-width: 10vw;
+    min-width: 12vw;
     min-height: 3.5vh;
     font-size: 0.6em;
     padding: 1vh;
