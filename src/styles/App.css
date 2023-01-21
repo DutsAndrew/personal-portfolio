@@ -296,7 +296,7 @@
 }
 
 #project.right {
-  margin-left: 10vw;
+  margin-left: 8vw;
   transform: translateX(-60%) scale(0.9);
   transition: .5s ease-in-out;
 }
