@@ -117,6 +117,102 @@
   animation: role-swap 3.5s infinite;
 }
 
+.tools {
+  max-height: 40vh;
+  min-height: 20vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  padding: 0;
+  margin: 0;
+}
+
+.tools-text {
+  font-size: 1.5em;
+  margin: 0;
+  margin-left: 2%;
+}
+
+.tool-container {
+  list-style: none;
+  perspective: 100px;
+  margin: 0;
+}
+
+@media (max-width: 601px) {
+  .tool-img {
+    min-width: 10vw;
+  }
+}
+
+@media (min-width: 601px) {
+  .tool-img {
+    min-width: 5vw;
+  }
+}
+
+.tools .tool-container {
+  animation: 10s infinite slide-in;
+}
+
+.tools .tool-container:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.tools .tool-container:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.tools .tool-container:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.tools .tool-container:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.tools .tool-container:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.tools .tool-container:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.tools .tool-container:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.tools .tool-container:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.tools .tool-container:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.tools .tool-container:nth-child(10) {
+  animation-delay: 1s;
+}
+
+.tools .tool-container:nth-child(11) {
+  animation-delay: 1.1s;
+}
+
+.tools .tool-container:nth-child(12) {
+  animation-delay: 1.2s;
+}
+
+.tools .tool-container:nth-child(13) {
+  animation-delay: 1.3s;
+}
+
+.tool-img:hover {
+  transform: rotateX(30deg) translateZ(10px) scale(1.1);
+}
+
 @keyframes blink {
   20%,
   24%,
@@ -171,5 +267,31 @@
   to {
     opacity: 0;
     transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  5% {
+    transform: translateY(30%);
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  94% {
+    transform: translateY(30%);
+  }
+  95% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 0;
   }
 }

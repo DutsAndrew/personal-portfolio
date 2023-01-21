@@ -80,7 +80,7 @@ const Tools = () => {
       <ul className="tools">
         {Array.isArray(tools) && tools.map((tool) => {
           return <li 
-            className="react-tool"
+            className="tool-container"
             key={tool.name} >
             <img 
               className="tool-img"
