@@ -110,7 +110,8 @@
   width: 100%;
   min-height: 30vh;
   font-size: 4em;
-  margin: 0;
+  margin: 1%;
+  overflow: hidden;
 }
 
 #current-role {
@@ -154,7 +155,7 @@
 }
 
 .tools .tool-container {
-  animation: 10s infinite slide-in;
+  animation: 7s infinite ease-out slide-in;
 }
 
 .tools .tool-container:nth-child(1) {
@@ -211,6 +212,111 @@
 
 .tool-img:hover {
   transform: rotateX(30deg) translateZ(10px) scale(1.1);
+}
+
+.projects {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 3vh;
+}
+
+#project {
+  list-style: none;
+  display: flex;
+  max-width: 90vw;
+  min-height: 30vh;
+  margin: 0;
+  position: relative;
+}
+
+#project.left {
+  flex-flow: row-reverse nowrap;
+  margin-right: 10vw;
+  transform: translateX(30%) scale(0.9);
+  transition: .5s ease-in-out;
+}
+
+#project.right {
+  flex-flow: row nowrap;
+  margin-left: 10vw;
+  transform: translateX(-30%) scale(0.9);
+  transition: .5s ease-in-out;
+}
+
+#project.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.project-info-container {
+  max-width: 60vw;
+  min-width: 30vw;
+}
+
+.project-name-text {
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.project-description-text {
+  font-size: 1.25em;
+}
+
+.project-name-text, .project-description-text {
+  line-height: 3vh;
+}
+
+.project-references-container  {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-reference-img {
+  min-width: 25vw;
+  max-width:  40vw;
+}
+
+.project-image {
+  max-width: 20vw;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .project-src-container {
+    flex-flow: column nowrap;
+  }
+}
+
+@media (min-width: 601px) {
+  .project-src-container {
+    flex-flow: row nowrap;
+  }
+}
+
+.project-src-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+}
+
+.project-src-code-container, .project-src-live-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+}
+
+.project-src-live-link, .project-src-code-link {
+  font-size: 1.5em;
+}
+
+.project-src-live-svg, .project-src-code-svg {
+  max-width: 8vw;
+  min-width: 4vw;
 }
 
 @keyframes blink {
@@ -271,27 +377,16 @@
 }
 
 @keyframes slide-in {
-  from {
-    opacity: 1;
+  0% {
     transform: translateY(0%);
   }
   5% {
     transform: translateY(30%);
   }
-  20% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  94% {
+  95% {
     transform: translateY(30%);
   }
-  95% {
-    opacity: 0;
+  100% {
     transform: translateY(0%);
-  }
-  to {
-    opacity: 0;
   }
 }

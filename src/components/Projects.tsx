@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import openArrow from '../assets/arrow-top-right.svg';
 
 const Projects = () => {
@@ -66,6 +66,29 @@ const Projects = () => {
     },
   ];
 
+  useEffect(() => {
+    // adds event listeners to projects for reveal transition after they've rendered to page
+    window.addEventListener("scroll", revealProject);
+  });
+
+  const revealProject = (): void => {
+    const allProjects = document.querySelectorAll('#project');
+
+    for (let i = 0; i < allProjects.length; i++) {
+      const windowHeight = window.innerHeight,
+            elementTop = allProjects[i].getBoundingClientRect().top,
+            elementVisible = 150;
+
+      if (elementTop && windowHeight && elementVisible) {
+        if (elementTop < windowHeight - elementVisible) {
+          allProjects[i].classList.add('active');
+        } else {
+          allProjects[i].classList.remove('active');
+        };
+      };
+    };
+  };
+
   return (
     <section 
       className="projects-container">
@@ -116,10 +139,7 @@ const Projects = () => {
                     alt="open arrow" >
                   </img>
                 </div>
-              </div>
 
-              <div 
-                className="project-src-container" >
                 <div
                   className="project-src-code-container">
                   <a 
@@ -133,6 +153,7 @@ const Projects = () => {
                     alt="open arrow" >
                   </img>
                 </div>
+
               </div>
 
             </div>
