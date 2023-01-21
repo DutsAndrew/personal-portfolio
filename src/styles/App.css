@@ -239,6 +239,7 @@
   display: flex;
   flex-flow: column nowrap;
   gap: 3vh;
+  padding: 0;
 }
 
 #project {
@@ -250,17 +251,30 @@
   position: relative;
 }
 
+@media (max-width: 600px) {
+  #project {
+    flex-flow: column nowrap;
+  }
+}
+
+@media (min-width: 601px) {
+  #project.left {
+    flex-flow: row-reverse nowrap;
+  }
+  #project.right {
+    flex-flow: row nowrap;
+  }
+}
+
 #project.left {
-  flex-flow: row-reverse nowrap;
   margin-right: 10vw;
-  transform: translateX(30%) scale(0.9);
+  transform: translateX(60%) scale(0.9);
   transition: .5s ease-in-out;
 }
 
 #project.right {
-  flex-flow: row nowrap;
   margin-left: 10vw;
-  transform: translateX(-30%) scale(0.9);
+  transform: translateX(-60%) scale(0.9);
   transition: .5s ease-in-out;
 }
 
@@ -270,8 +284,9 @@
 }
 
 .project-info-container {
-  max-width: 60vw;
-  min-width: 30vw;
+  flex-flow: column nowrap;
+  width: 100%;
+  margin: 2%;
 }
 
 .project-name-text {
@@ -289,18 +304,15 @@
 
 .project-references-container  {
   display: flex;
+  width: 95%;
+  margin: 2%;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
 
-.project-reference-img {
-  min-width: 25vw;
-  max-width:  40vw;
-}
-
 .project-image {
-  max-width: 20vw;
+  width: 100%;
   height: auto;
 }
 
@@ -320,7 +332,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2%;
+  width: 100%;
+  height: auto;
 }
 
 .project-src-code-container, .project-src-live-container {
@@ -329,10 +342,19 @@
   justify-content: center;
   align-items: center;
   margin: 2%;
+  border: 1px solid rgb(0,0,0, 0.1);
+}
+
+.project-src-code-container:hover, .project-src-live-container:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+  background-color: #ffa500;
 }
 
 .project-src-live-link, .project-src-code-link {
   font-size: 1.5em;
+  text-decoration: none;
+  color: black;
 }
 
 .project-src-live-svg, .project-src-code-svg {
@@ -389,22 +411,17 @@
   min-height: 30vh;
 }
 
-.linkedin-link, .github-link, .email-button {
+.linkedin-link, .github-link {
   min-width: 15vw;
   max-width: 35vw;
 }
 
-.email-button {
-  border: none;
-  background-color: white;
-}
-
-.linkedin-svg, .github-svg, .email-svg {
+.linkedin-svg, .github-svg {
   max-width: 35vw;
   min-width: 15vw;
 }
 
-.linkedin-svg:hover, .github-svg:hover, .email-svg:hover {
+.linkedin-svg:hover, .github-svg:hover {
   cursor: pointer;
   transform: scale(0.9);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -416,10 +433,6 @@
 
 .github-svg {
   filter: invert(3%) sepia(12%) saturate(661%) hue-rotate(314deg) brightness(94%) contrast(88%);
-}
-
-.email-svg {
-  filter: invert(85%) sepia(45%) saturate(3043%) hue-rotate(357deg) brightness(103%) contrast(102%);
 }
 
 .resume-container  {

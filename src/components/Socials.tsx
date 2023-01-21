@@ -32,17 +32,6 @@ const Socials = () => {
         </img>
       </a>
 
-      <a 
-        className="email-button" 
-        data-testid="email-test"
-        href="mailto:dutsandrew@gmail.com" >
-        <img 
-          className="email-svg" 
-          alt="email icon"
-          src={emailSVG} >
-        </img>
-      </a>
-
     </nav>
   );
 };

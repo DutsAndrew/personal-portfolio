@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
 import openArrow from '../assets/arrow-top-right.svg';
+import espressitIMG from '../assets/espressit-ref.png';
+import waldoIMG from '../assets/waldo-ref.png';
+import libraryIMG from '../assets/library-ref.png';
+import steamStoreIMG from '../assets/steam-store-ref.png';
+import weatherIMG from '../assets/weather-ref.png';
 
 const Projects = () => {
 
@@ -13,6 +18,8 @@ const Projects = () => {
       built: 'December 2022',
       testid: 'espressit-test',
       orientation: 'left',
+      imgRef: espressitIMG,
+      infoTag: 'Web, Mobile',
     },
     {
       name: 'Where\'s Waldo - Photo Tagging App',
@@ -23,6 +30,8 @@ const Projects = () => {
       built: 'November 2022',
       testid: 'photo-tagging-test',
       orientation: 'right',
+      imgRef: waldoIMG,
+      infoTag: 'Web, Mobile',
     },
     {
       name: 'Library App',
@@ -33,6 +42,8 @@ const Projects = () => {
       built: 'November 2022',
       testid: 'library-test',
       orientation: 'left',
+      imgRef: libraryIMG,
+      infoTag: 'Web Only',
     },
     {
       name: 'Steam Store - Shopping App',
@@ -43,6 +54,8 @@ const Projects = () => {
       built: 'October 2022',
       testid: 'shopping-test',
       orientation: 'right',
+      imgRef: steamStoreIMG,
+      infoTag: 'Web Only',
     },
     {
       name: 'Weather App',
@@ -53,16 +66,8 @@ const Projects = () => {
       built: 'July 2022',
       testid: 'weather-test',
       orientation: 'left',
-    },
-    {
-      name: 'To Do List',
-      code: 'https://github.com/DutsAndrew/to-do-List',
-      live: 'https://dutsandrew.github.io/to-do-list/',
-      description: 'Users in this app will be using their browsers local storage to store their to-do lists. Regardless of when they open up the app, the data will still be there on their computer. Users can add projects to their list, each project can have an unlimited amount of to-dos attached. Users can edit or delete any to-do or project as well as make as many as they want. There is an attached sidebar that users can hide or use to sort their projects by the nearest due date.',
-      tools: 'JavaScript, Local Storage, CSS, Git',
-      built: 'June 2022',
-      testid: 'todo-test',
-      orientation: 'right',
+      imgRef: weatherIMG,
+      infoTag: 'Web Only',
     },
   ];
 
@@ -115,6 +120,11 @@ const Projects = () => {
                 className="project-description-text" >
                 {project.description}
               </p>
+
+              <h3 
+                className="info-tag-text">
+                Avaible On: {project.infoTag}
+              </h3>
             </div>
 
             <div className="project-references-container">
@@ -123,7 +133,7 @@ const Projects = () => {
                 className="project-reference-img">
                 <img 
                   className="project-image"
-                  src=""
+                  src={project.imgRef}
                   alt={project.name}>
                 </img>
               </div>
