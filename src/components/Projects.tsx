@@ -123,7 +123,7 @@ const Projects = () => {
 
               <h3 
                 className="info-tag-text">
-                Avaible On: {project.infoTag}
+                Available On: {project.infoTag}
               </h3>
             </div>
 
