@@ -315,13 +315,14 @@
 .project-name-text {
   font-weight: 900;
   font-size: 1.5em;
+  line-height: 1.10em;
 }
 
 .project-description-text {
   font-size: 1.25em;
 }
 
-.project-name-text, .project-description-text {
+.project-description-text {
   line-height: 3vh;
 }
 

@@ -10,11 +10,11 @@ const Projects = () => {
 
   const projects = [
     {
-      name: 'Espressit - Social Media App',
+      name: 'Espressit - Social Media App (Fullstack Application)',
       code: 'https://github.com/DutsAndrew/espressit-social-media-app',
       live: 'https://dutsandrew.github.io/espressit-social-media-app/',
-      description: 'Espressit is a social media app and blog hybrid. Users can upvote, downvote, and favorite posts; they can also create their own posts with links or images. And better yet, they can sort their feed by "Hot", "Controversial", "Contributed", and "New"',
-      tools: 'ReactJS, Typescript, Firebase, CSS, Git, Bad Words Filter, uniqid, and svgs',
+      description: 'Espressit is a social media page, where ussers can interact with various posts through: upvotes, downvotes, and favoriting posts; they can also create their own posts with links or images. Espressit has sorting algorithms that users can use to personalize their feed by "Hot", "Controversial", "Contributed", and "New"',
+      tools: 'ReactJS, React Components, Typescript, Firebase, CSS, Git, Bad Words Filter, uniqid, and svgs',
       built: 'December 2022',
       testid: 'espressit-test',
       orientation: 'left',
@@ -22,10 +22,10 @@ const Projects = () => {
       infoTag: 'Web, Mobile',
     },
     {
-      name: 'Where\'s Waldo - Photo Tagging App',
+      name: 'Where\'s Waldo - Photo Tagging App (Fullstack Application)',
       code: 'https://github.com/DutsAndrew/photo-tagging-app',
       live: 'https://dutsandrew.github.io/photo-tagging-app/',
-      description: 'Wheres\'s Waldo is a gamified version of the Where\'s Waldo books. Users can pick a level and try to find all the characters within that level. If found, users can add their timed score to the leaderboard. Each level has it\'s own leaderboard and can be viewed independently from playing the game.',
+      description: 'Wheres\'s Waldo is a digitalized version of the Where\'s Waldo books. Users can pick a level and try to find all the characters within that level. If found, users can add their timed score to the leaderboard. Each level has it\'s own leaderboard and can be viewed independently from playing the game.',
       tools: 'ReactJS, Typescript, Firebase, CSS, Git, uniqid, svgs',
       built: 'November 2022',
       testid: 'photo-tagging-test',
@@ -34,7 +34,7 @@ const Projects = () => {
       infoTag: 'Web, Mobile',
     },
     {
-      name: 'Library App',
+      name: 'Reading Library (Fullstack Application)',
       code: 'https://github.com/DutsAndrew/library-app',
       live: 'https://dutsandrew.github.io/library-app/',
       description: 'In Reading Library, users can add books they want to read or have read to their library. Upon authentication, a user instance is created on the backend and all books created or deleted will be changed on the server. Users will see this change on the front end instantly. In addition users can mark their books as "read" or "unread"',
@@ -46,7 +46,7 @@ const Projects = () => {
       infoTag: 'Web Only',
     },
     {
-      name: 'Steam Store - Shopping App',
+      name: 'Steam Store - Shopping App (Frontend API Application)',
       code: 'https://github.com/DutsAndrew/shopping-cart',
       live: 'https://dutsandrew.github.io/shopping-cart/',
       description: 'This app is a steam store clone, using the same color scheme as the original app, the app consumes the STEAM store API and presents all the current featured games on load. Users can search for games, add them to their cart, change the quantities, remove items from cart, and the total is displayed at checkout.',
@@ -58,10 +58,10 @@ const Projects = () => {
       infoTag: 'Web Only',
     },
     {
-      name: 'Weather App',
+      name: 'Weather App (Frontend API Application)',
       code: 'https://github.com/DutsAndrew/weather-app',
       live: 'https://dutsandrew.github.io/weather-app/',
-      description: 'By consuming the openweather API, users can search for their local weather; or the weather from any location they choose... The current weather as well as the daily and hourly forecast will be fetched and displayed to the user within seconds.',
+      description: 'The Weather App consumes the openweather API; users can search for their local weather or the weather from any location they choose... The current weather as well as the daily and hourly forecast will be fetched and displayed to the user within seconds.',
       tools: 'JavaScript, openweather API, CSS, Git',
       built: 'July 2022',
       testid: 'weather-test',
@@ -119,6 +119,14 @@ const Projects = () => {
               <p 
                 className="project-description-text" >
                 {project.description}
+              </p>
+              <p className="project-tools-text">
+                <strong>
+                  Tools: &nbsp;
+                </strong> 
+                <em>
+                  {project.tools}
+                </em>
               </p>
 
               <h3 
