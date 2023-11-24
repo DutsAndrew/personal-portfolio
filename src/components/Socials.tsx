@@ -1,7 +1,6 @@
 import React from "react";
 import linkedinSVG from '../assets/linkedin.svg';
 import githubSVG from '../assets/github.svg';
-import emailSVG from '../assets/email-fast.svg';
 
 const Socials = () => {
 

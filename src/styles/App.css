@@ -124,10 +124,9 @@
   margin: 0;
   margin-top: 2%;
   margin-right: 2%;
-  min-height: 20vh;
-  min-width: 15vw;
-  max-height: 24vh;
-  max-width: 25vw;
+  max-width: 20vw;
+  height: auto;
+  max-height: 25vh;
 }
 
 .roles-container {
