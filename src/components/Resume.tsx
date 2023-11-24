@@ -1,5 +1,5 @@
 import React from "react";
-const resume = require('../assets/AndrewDutsonResume.pdf');
+const resume = require('../assets/Andrew_Dutson_Resume.pdf');
 
 const Resume = () => {
 
